@@ -67,8 +67,6 @@ Then open your browser and visit:
 
 ![Prediction Result](weather_web/Screenshot%202025-06-19%20000021.png)
 
-> 💡 Make sure the images are uploaded to the same `assets/` folder in your GitHub repo.
-
 ---
 
 ## ⚠️ Error Handling
@@ -77,6 +75,4 @@ If invalid (non-numeric) values are entered, a user-friendly error message will 
 
 ---
 
-## 📄 License
 
-This project is for educational/demo purposes. You’re free to use and modify it.
