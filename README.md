@@ -61,11 +61,11 @@ Then open your browser and visit:
 
 ### Input Form
 
-![Input Form](assets/Screenshot%202025-06-19%20000011.png)
+![Input Form](weather_web/Screenshot%202025-06-19%20000011.png)
 
 ### Prediction Result
 
-![Prediction Result](assets/Screenshot%202025-06-19%20000021.png)
+![Prediction Result](weather_web/Screenshot%202025-06-19%20000021.png)
 
 > 💡 Make sure the images are uploaded to the same `assets/` folder in your GitHub repo.
 
