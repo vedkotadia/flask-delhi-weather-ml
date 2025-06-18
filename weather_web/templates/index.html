@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delhi Temperature Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        .container {
+            background: white;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .btn-predict {
+            width: 100%;
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            margin-top: 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn-predict:hover {
+            background: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+            text-align: center;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Delhi Temperature Predictor</h2>
+    <form method="POST">
+        <label for="humidity">Humidity (%):</label>
+        <input type="number" step="0.01" name="humidity" required>
+
+        <label for="wind_speed">Wind Speed (km/h):</label>
+        <input type="number" step="0.01" name="wind_speed" required>
+
+        <label for="meanpressure">Mean Pressure (mb):</label>
+        <input type="number" step="0.01" name="meanpressure" required>
+
+        <label for="month">Month (1-12):</label>
+        <input type="number" min="1" max="12" name="month" required>
+
+        <label for="dayofyear">Day of Year (1-366):</label>
+        <input type="number" min="1" max="366" name="dayofyear" required>
+
+        <button type="submit" class="btn-predict">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            Predicted Temperature: {{ prediction }}
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+    {% endif %}
+</div>
+</body>
+</html>
